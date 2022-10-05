@@ -2,18 +2,21 @@ import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
+import { Link } from 'react-router-dom';
 import Login from './Login';
 import Signup from './Signup';
 
-function Header() {
+function Nav() {
     const [loginShow, setLoginShow] = useState(false);
     const [signupShow, setSignupShow] = useState(false);
 
     return (
         <header>
-            <Navbar bg="dark" variant="dark">
+            <Navbar fixed="top" bg="dark" variant="dark">
                 <Container>
-                    <Navbar.Brand href="#home">Note-It</Navbar.Brand>
+                    <Link to="/" className="text-decoration-none">
+                        <Navbar.Brand>Note-It</Navbar.Brand>
+                    </Link>
                     <Navbar.Toggle />
                     <Navbar.Collapse className="justify-content-end">
                         <Navbar.Text className="me-2">
@@ -43,4 +46,4 @@ function Header() {
     );
 }
 
-export default Header;
+export default Nav;

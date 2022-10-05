@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Button } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import header1 from '../../../assets/images/header1.png';
 import header2 from '../../../assets/images/header2.png';
 import header3 from '../../../assets/images/header3.png';
@@ -31,12 +32,14 @@ function Header() {
                     note-taking web-app for digitalists and professionals. Capture your notes,
                     files, and life&apos;s work all in one secure place.
                 </p>
-                <Button
-                    className={`py-2 ${screenWidth > 992 ? 'px-4' : 'w-100'}`}
-                    variant="primary fw-bold"
-                >
-                    Take Notes
-                </Button>
+                <Link to="/notes">
+                    <Button
+                        className={`py-2 ${screenWidth > 992 ? 'px-4' : 'w-100'}`}
+                        variant="primary fw-bold"
+                    >
+                        Take Notes
+                    </Button>
+                </Link>
             </div>
             <div
                 className="d-flex justify-content-center gap-1 overflow-hidden mt-5"

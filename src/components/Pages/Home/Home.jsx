@@ -1,13 +1,17 @@
 import React from 'react';
+import Nav from '../../navbar/Nav';
 import Header from './Header';
 import SpeacialFeatures from './SpeacialFeatures';
 
 function Home() {
     return (
-        <main className="container">
-            <Header />
-            <SpeacialFeatures />
-        </main>
+        <>
+            <Nav />
+            <main className="container pt-5">
+                <Header />
+                <SpeacialFeatures />
+            </main>
+        </>
     );
 }
 
